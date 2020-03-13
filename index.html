@@ -4,16 +4,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="apple-mobile-web-ap-title" content="CodePen">
+<meta name="apple-mobile-web-app-title" content="CodePen">
 <title>CodePen - 2025-4</title>
 <style>
 body{
-  background-image:url("https://media.giphy.com/media/BmmfETghGOPrW/giphy.gif");
+  background-image:url("https://media.giphy.com/media/1hujy3a24Q3eM/giphy.gif");
 }
 
 ol{
-  background:yellow;
+  background:white
 }
+
+h1{
+  background:white
+}
+
 
 .correct{
   background:green;
@@ -25,14 +30,19 @@ ol{
 </style>
 </head>
 <body translate="no">
-<h1>Math Problems</h1>
+<h1>Ameyan's workshit</h1>
 <ol>
 <li>2 + 2<input data-correct="4"></li>
 <li>2 + 3<input data-correct="5"></li>
 <li>2<sup>3</sup> <input data-correct="8"></li>
 <li>2<sup>4</sup> <input data-correct="16"></li>
-<li>Who is the President of the US<input data-correct="Trump"></li>
+<li>Who is the President of the US?<input data-correct="Trump"></li> <li>How many states are in the U.S.?<input data-correct="50"></li>
+<li>How do you say "hi" in spanish?<input data-correct="hola"></li>
+<li>How do you say "math class" in spanish?<input data-correct="clase de matematicas"></li>
+<li>Who is the govenor for Washington?<input data-correct="Jay Inslee"></li>
+<li>How do you say "hi" in Esperanto<input data-correct="saluton"></li>
 </ol>
+<p style="font-size:100px" id='smiley'>&#128540;</p>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script id="rendered-js">
 console.clear();
@@ -48,10 +58,11 @@ function onChange(evt){
   if(correct == response){
     console.log("answer correct")
     $(this).removeClass("incorrect").addClass("correct");
+      $("#smiley").show();
   } else{
     console.log("answer incorrect");
      $(this).removeClass("correct").addClass("incorrect");
-
+      $("#smiley").hide();
   }
   
 }
